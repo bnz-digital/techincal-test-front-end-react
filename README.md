@@ -21,7 +21,8 @@ This isn't a exam, there are no right or wrong solutions. We are more interested
 * If an item has children, its respective children should be show a relationship to their parent (e.g. indenting).
 
 An example of a completed navigation list is shown below, but feel free to only use this as a suggestion.
-(image here)
+
+<img src="https://github.com/bnz-digital/techincal-test-front-end-react/blob/main/IA.png?raw=true" alt="IA image" width="400"/>
 
 ## Task
 
