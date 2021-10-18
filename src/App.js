@@ -3,16 +3,19 @@ import './App.css';
 import { fetchData } from './Data/data';
 
 function App() {
+  const [navLoading, setNavLoading] = useState(true);
   const [navItems, setNavItems] = useState([]);
 
   useEffect(() => {
       fetchData()
-          .then(data => setNavItems(data))
+          .then(data => {
+            setNavItems(data);
+            setNavLoading(false);
+          });
   }, [navItems]);
 
   const renderNav = () => {
-      // TODO: Loading state set by useEffect
-      if (!navItems.length) return 'loading...';
+      if (navLoading) return 'loading...';
 
       return navItems.map(i =>
           <li>{ i.name }</li>
