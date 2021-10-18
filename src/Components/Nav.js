@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Nav({loading, items}) {
     const styles = {
@@ -18,15 +18,35 @@ export default function Nav({loading, items}) {
     return render();
 }
 
+function Item({item, children}) {
+    const [open, setOpen] = useState(false);
+
+    const toggleOpen = () => {
+        if (item.children) setOpen(!open);
+    };
+
+    return <li
+        key={ item.id }
+        id={ item.id }
+    >
+        { item.children && (open ? 'v ' : '> ')}
+        <span
+            onClick={toggleOpen}
+        >
+            { item.name }
+        </span>
+        { open && children }
+    </li>;
+}
+
 function renderItem(item) {
     if (item.children) return (
-        <li key={ item.id } id={ item.id }>
-            { item.name }
+        <Item item={item}>
             <ul>
                 { item.children.map(renderItem) }
             </ul>
-        </li>
+        </Item>
     );
 
-    return <li key={ item.id } id={ item.id }>{ item.name }</li>;
+    return <Item item={item}/>;
 }
