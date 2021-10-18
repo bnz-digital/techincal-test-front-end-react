@@ -61,3 +61,6 @@ The Information Architecture in the data looks like this:
 Please push your code to this repository, and let us know when you're done. We'll get the interviewers to have a look over your code before the interview.
 
 Best of luck! 🎉
+
+## Assumptions
+- Data from 'API' is properly formatted and doesn't need to be validated

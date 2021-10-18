@@ -17,9 +17,21 @@ function App() {
   const renderNav = () => {
       if (navLoading) return 'loading...';
 
-      return navItems.map(i =>
-          <li>{ i.name }</li>
+      return (
+          <ul>
+              { navItems.map(renderNavItem) }
+          </ul>
       );
+  };
+
+  const renderNavItem = (item) => {
+      if (item.children) return (
+          <ul>
+              { item.children.map(this) }
+          </ul>
+      );
+
+      return <li key={ item.id } id={ item.id }>{ item.name }</li>;
   };
 
   return (
