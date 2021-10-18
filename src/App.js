@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { fetchData } from './Data/data';
+import Nav from './Components/Nav';
 
 function App() {
   const [navLoading, setNavLoading] = useState(true);
@@ -14,29 +15,9 @@ function App() {
           });
   }, [navItems]);
 
-  const renderNav = () => {
-      if (navLoading) return 'loading...';
-
-      return (
-          <ul>
-              { navItems.map(renderNavItem) }
-          </ul>
-      );
-  };
-
-  const renderNavItem = (item) => {
-      if (item.children) return (
-          <ul>
-              { item.children.map(this) }
-          </ul>
-      );
-
-      return <li key={ item.id } id={ item.id }>{ item.name }</li>;
-  };
-
   return (
     <div className="App">
-        { renderNav() }
+        <Nav loading={navLoading} items={navItems}/>
     </div>
   );
 }
