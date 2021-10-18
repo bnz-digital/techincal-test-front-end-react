@@ -62,5 +62,6 @@ Please push your code to this repository, and let us know when you're done. We'l
 
 Best of luck! 🎉
 
-## Assumptions
+## Assumptions/Considerations
 - Data from 'API' is properly formatted and doesn't need to be validated
+- Nav is for a component library, so I've abstracted it into a re-usable, importable component 
