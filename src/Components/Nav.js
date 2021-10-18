@@ -21,6 +21,10 @@ export default function Nav({loading, items}) {
 function Item({item, children}) {
     const [open, setOpen] = useState(false);
 
+    const styles= {
+        listStyleType: 'none'
+    };
+
     const toggleOpen = () => {
         if (item.children) setOpen(!open);
     };
@@ -28,6 +32,7 @@ function Item({item, children}) {
     return <li
         key={ item.id }
         id={ item.id }
+        style={styles}
     >
         { item.children && (open ? 'v ' : '> ')}
         <span
