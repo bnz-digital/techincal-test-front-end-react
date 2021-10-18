@@ -1,11 +1,15 @@
 import React from 'react';
 
 export default function Nav({loading, items}) {
+    const styles = {
+        textAlign: 'left'
+    };
+
     const render = () => {
         if (loading) return 'loading...';
 
         return (
-            <ul>
+            <ul style={styles}>
                 { items.map(renderItem) }
             </ul>
         );
