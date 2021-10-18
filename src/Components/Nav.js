@@ -16,9 +16,12 @@ export default function Nav({loading, items}) {
 
 function renderItem(item) {
     if (item.children) return (
-        <ul>
-            { item.children.map(renderItem) }
-        </ul>
+        <li key={ item.id } id={ item.id }>
+            { item.name }
+            <ul>
+                { item.children.map(renderItem) }
+            </ul>
+        </li>
     );
 
     return <li key={ item.id } id={ item.id }>{ item.name }</li>;
