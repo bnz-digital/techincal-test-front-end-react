@@ -58,6 +58,6 @@ The Information Architecture in the data looks like this:
         * Radio
 
 ## Submission
-Please push your code to this repository, and let us know when you're done. We'll get the interviewers to have a look over your code before the interview.
+Please push your code to a new private github repository, and send us an email when you're done. We'll get the interviewers to jump on as collaborators (we'll provide their github emails to you) so they can have a look over your code before the interview.
 
 Best of luck! 🎉
