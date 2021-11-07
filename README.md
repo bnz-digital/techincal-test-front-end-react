@@ -61,3 +61,7 @@ The Information Architecture in the data looks like this:
 Please push your code to a new private github repository, and send us an email when you're done. We'll get the interviewers to jump on as collaborators (we'll provide their github emails to you) so they can have a look over your code before the interview.
 
 Best of luck! 🎉
+
+## Assumptions/Considerations
+- Data from 'API' is properly formatted and doesn't need to be validated
+- Nav is for a component library, so I've abstracted it into a re-usable, importable component 
